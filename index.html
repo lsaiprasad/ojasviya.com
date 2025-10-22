@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OJASVIYA International Pvt Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== Header ===== */
+    header{position:fixed;top:0;left:0;right:0;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.08);z-index:1000}
+    .nav-container{display:flex;align-items:center;justify-content:space-between;padding:12px 8%}
+    .logo img{height:100px}
+    nav ul{display:flex;gap:22px;list-style:none}
+    nav li{font-weight:600;color:#333;cursor:pointer}
+    nav li a:hover{color:#00B8FF}
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    /* ===== Hero ===== */
+    .hero{
+      margin-top:72px;
+      position:relative;
+      background:linear-gradient(135deg,#4B0082cc,#00B8FFcc);
+      color:#fff;
+      text-align:center;
+      padding:80px 6% 60px;
+      border-bottom-left-radius:18px;
+      border-bottom-right-radius:18px;
+      overflow:hidden;
+    }
+    .hero .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+    .hero h1{font-family:'Montserrat',sans-serif;font-size:2.6rem;margin-bottom:10px;letter-spacing:0.6px}
+    .hero p{font-size:1.05rem;max-width:820px;margin:0 auto 18px}
+    .hero .cta{display:inline-block;background:#fff;color:#00B8FF;padding:12px 20px;border-radius:8px;font-weight:700;cursor:pointer}
+    .hero .sub{margin-top:12px;font-size:0.95rem;opacity:0.95}
+
+    /* decorative banner image (placed behind gradient) */
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:url('hero-banner.jpg');
+      background-size:cover;background-position:center;
+      opacity:0.18;filter:grayscale(10%) contrast(0.9);
+      z-index:1;
+    }
+
+
+    /* About Section */
+    .about {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .about h2 {
+      color: #004AAD;
+      margin-bottom: 20px;
+    }
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* mission Section */
+    .mission {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .mission h2 {
+      color: #004AAD;
+      margin-bottom: 20px;
+    }
+    .mission p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* vision Section */
+    .vision {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .vision h2 {
+      color: #004AAD;
+      margin-bottom: 20px;
+    }
+    .vision p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* leadership */
+    .leadership {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .leadership h2 {
+      color: #004AAD;
+      margin-bottom: 20px;
+    }
+    .leadership p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ===== Leadership ===== */
+    .leaders{background:#004AAD;color:#fff;padding:40px 10%;border-radius:10px;text-align:center;}
+    .leaders{display:flex;flex-wrap:wrap;gap:16px;justify-content:flex-start;margin-top:18px}
+    .leader-card{width:240px;background:#fff;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(11,22,40,0.04);text-align:center}
+    .leader-card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 10px;border:3px solid #00B8FF}
+    .leader-card h3{color:#4B0082;margin-bottom:6px;font-size:1rem}
+    .leader-card p{font-size:0.9rem;color:#555}
+
+
+    /* Services Section */
+    .services {
+      background: #f8f9fc;
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .services h2 {
+      color: #004AAD;
+      margin-bottom: 40px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .service-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    .service-card h3 {
+      color: #004AAD;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* training */
+    .training {
+      padding: 80px 10%;
+      text-align: Justify;
+    }
+    .training h2 {
+      color: #004AAD;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .training p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .training{margin-top:20px;}
+    .training{background:#f9fafc;border-left:4px solid #004AAD;padding:15px;margin:15px 0;border-radius:5px;}
+
+    /* clients */
+    .clients {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    .clients h2 {
+      color: #004AAD;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .clients section{padding:80px 12%;background:#fff;margin:40px auto;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,0.05);opacity:0;transform:translateY(40px);transition:all .8s;}
+    .clients section.visible{opacity:1;transform:translateY(0);}
+    .clients h2{font-family:'Montserrat',sans-serif;color:#004AAD;border-bottom:3px solid #FFD700;display:inline-block;padding-bottom:6px;margin-bottom:20px;}
+    .clients p{line-height:1.7;margin-top:15px;}
+    .clients ul{margin-top:15px;padding-left:20px;line-height:1.8;}
+    .client {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:25px;text-align:center;}
+    .client-card{background:#fff;border-radius:10px;padding:25px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+    .client-card:hover{transform:scale(1.03);transition:.3s;}
+
+
+    /* Contact Section */
+    .contact {
+      background:#00B8FF;
+      color:#fff;
+      text-align:center;
+      padding:80px 10%;
+    }
+    .contact h2 {
+      color:#fff;
+      font-family:'Montserrat', sans-serif;
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+    .contact p {
+      max-width:650px;
+      margin:0 auto 20px;
+      font-size:1.1rem;
+    }
+    .contact form {
+      max-width:600px;
+      margin:0 auto;
+    }
+    .contact input, .contact textarea {
+      width:100%;
+      padding:14px;
+      margin:8px 0;
+      border:none;
+      border-radius:8px;
+      font-size:1rem;
+    }
+    .contact button {
+      background:#fff;
+      color:#00B8FF;
+      padding:12px 25px;
+      border:none;
+      border-radius:6px;
+      font-weight:bold;
+      cursor:pointer;
+      margin-top:10px;
+      transition:0.3s;
+    }
+    .contact button:hover {
+      background:#004AAD;
+      color:#fff;
+    }
+    .contact iframe {
+      margin-top:50px;
+      width:100%;
+      height:400px;
+      border:0;
+      border-radius:10px;
+    }
+
+    footer {
+      background:#004AAD;
+      color:#fff;
+      text-align:center;
+      padding:15px;
+      font-size:0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo"><img src="b703b6d2-9752-4b0c-9e02-bba576ba4d19.png" alt="OJASVIYA Logo"></div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" aria-label="OJASVIYA hero">
+    <div class="hero-inner">
+      <h1>OJASVIYA International Pvt Ltd</h1>
+      <p>Optimizing Today, Innovating Tomorrow — empowering organizations and learners through technology, education, and innovation.</p>
+      <div style="margin-top:18px">
+        <a class="cta" href="#services">Explore Services</a>
+      </div>
+      <div class="sub">Blending GIS, EdTech, and advanced engineering to deliver measurable digital transformation.</div>
+    </div>
+  </section>
+
+  <main class="container">
+
+  <!-- About -->
+  <section class="about" id="about">
+      <h2>About Us</h2>
+      <p class="lead">OJASVIYA International is a forward-thinking technology and education company dedicated to delivering innovative IT solutions, digital learning platforms, GIS & surveying services, engineering support and data-driven strategies that empower businesses and individuals to succeed in a rapidly evolving digital world. And training programs that help organisations adapt and grow.</p>
+    </section>
+
+    <!-- mission -->
+    <section class="mission" id="mission">
+      <h2>Mission</h2>
+      <p class="lead">Our mission is to empower organizations and learners through cutting-edge technology, data-driven insights, and innovative educational solutions. We strive to optimize performance, enhance scalability, and deliver measurable outcomes that advance businesses and individuals toward a smarter, more connected future.</p>
+    </section>
+
+    <!-- vision -->
+    <section class="vision" id="vision">
+      <h2>Vision</h2>
+      <p class="lead">To be a global catalyst for digital transformation and educational empowerment — where technology, innovation, and knowledge converge to create sustainable progress for businesses, learners, and communities worldwide.</p>
+    </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="IT Solutions" />
+        <h3>IT Solutions & Consulting</h3>
+        <p>Custom software development, IT infrastructure, and digital transformation services tailored to your business goals.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="GIS Mapping" />
+        <h3>Survey & Mapping Solutions</h3>
+        <p>Comprehensive GIS, Remote Sensing, and LiDAR services for accurate spatial data acquisition and analysis.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784065.png" alt="Engineering" />
+        <h3>Engineering Solutions</h3>
+        <p>High-precision engineering design, drafting, and project management solutions for diverse infrastructure sectors.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="BPO" />
+        <h3>BPO Services</h3>
+        <p>Cost-effective Business Process Outsourcing solutions with reliable support and process automation capabilities.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="EdTech" />
+        <h3>Training & Internship Programs</h3>
+        <p>Hands-on technical and professional training to empower young minds in GIS, Engineering, and IT domains.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" alt="AI & Data" />
+        <h3>AI & Data Analytics</h3>
+        <p>Smart data-driven insights and automation through Artificial Intelligence, Machine Learning, and predictive analytics.</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- training & internships -->
+    <section class="training" id="training">
+      <h2>Training & Internship</h2>
+      <p class="lead">Our training & internship programs combine classroom learning, project-based assignments, and industry mentorship to prepare candidates for real-world roles.</p>
+      <ul style="margin-top:16px;padding-left:20px">
+        <li>GIS Development (project-based)</li>
+        <li>Cadastral Mapping (project-based)</li>
+        <li>Drone & DGPS Survey</li>
+        <li>GIS, LiDAR & Photogrammetry (project-based)</li>
+        <li>Image Processing (project-based)</li>
+        <li>CAD,BIM( REvit, Tekla & Catia) (project-based)</li>
+        <li>Machine Learning & Data Analytics (with case studies)</li>
+        <li>Software & Web Development (full-stack internships)</li>
+        <li>Corporate Readiness & Soft Skills (placements support)</li>
+      </ul>
+    </section>
+
+    <!-- leadership -->
+    <section class="leadership" id="leadership">
+      <h2>Leadership Board</h2>
+      <div class="leaders">
+        <div class="leader-card">
+          <img src="leader1.jpg" alt="Saiprasad Latchubhukta">
+          <h3>Saiprasad Latchubhukta</h3>
+          <p>Founder & Managing Director</p>
+        </div>
+        <div class="leader-card">
+          <img src="leader2.png" alt="Team OJASVIYA">
+          <h3>Team OJASVIYA</h3>
+          <p>Head – Operations & Strategy</p>
+        </div>
+        <div class="leader-card">
+          <img src="leader2.png" alt="Team OJASVIYA">
+          <h3>Team OJASVIYA</h3>
+          <p>Innovation, Research & GIS Division</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Clients -->
+    <section class="clients" id="clients">
+    <h2>Our Valued Clients</h2>
+    <p class="client">We’re proud to serve reputed organizations across industries.</p>
+    <div class="client">
+      <div class="client-card">L&T Construction</div>
+      <div class="client-card">TATA Projects</div>
+      <div class="client-card">Adani Infra</div>
+      <div class="client-card">Government of Telangana</div>
+      <div class="client-card">NHAI & RD Department</div>
+    </div>
+  </section>
+
+
+    <!-- contact -->
+    <!-- ====== Contact Section (Modern Blue Layout) ====== -->
+<section class="contact" id="contact" style="background:#00B8FF; color:#fff; text-align:center; padding:80px 10%;">
+  <h2 style="color:#fff; font-family:'Montserrat', sans-serif; font-size:2rem; margin-bottom:10px;">
+    OJASVIYA International Pvt Ltd
+  </h2>
+  <p style="max-width:650px; margin:0 auto 20px; font-size:1.1rem;">
+    We’d love to hear from you. Reach out to us for business inquiries, collaborations, or support.
+  </p>
+
+  <p style="font-size:1rem; margin-bottom:6px;">
+    <span style="font-size:1.2rem;">📞</span> <strong>Mobile:</strong> +91 94934 29182
+  </p>
+  <p style="font-size:1rem; margin-bottom:25px;">
+    <span style="font-size:1.2rem;">✉️</span> <strong>Email:</strong> <a href="mailto:info@ojasviya.com" style="color:#fff; text-decoration:underline;">info@ojasviya.com</a>
+  </p>
+
+  <form style="max-width:600px; margin:0 auto;">
+    <input type="text" placeholder="Your Name" required
+      style="width:100%; padding:14px; margin:8px 0; border:none; border-radius:8px; font-size:1rem;">
+    <input type="email" placeholder="Your Email" required
+      style="width:100%; padding:14px; margin:8px 0; border:none; border-radius:8px; font-size:1rem;">
+    <textarea rows="4" placeholder="Your Message" required
+      style="width:100%; padding:14px; margin:8px 0; border:none; border-radius:8px; font-size:1rem;"></textarea>
+    <button type="submit"
+      style="background:#fff; color:#00B8FF; padding:12px 25px; border:none; border-radius:6px; font-weight:bold; cursor:pointer; margin-top:10px; transition:0.3s;">
+      Send Message
+    </button>
+  </form>
+
+  <!-- Google Map Embed -->
+  <div style="margin-top:50px;">
+    <iframe
+      src="https://www.google.com/maps?q=GH7M%2BV8G%20Dammaiguda%20Secunderabad%20Telangana%20500087&output=embed"
+      width="100%" height="400" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 OJASVIYA International Pvt Ltd. All Rights Reserved.
+    <div class="footer-contact">📞 +91 94934 29182 | 📧 info@ojasviya.com | 🌐 www.ojasviya.com</div>
+  </footer>
+
+</body>
+</html>
